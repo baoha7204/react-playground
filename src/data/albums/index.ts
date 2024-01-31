@@ -1,33 +1,3 @@
-export function makeFetching<T>() {
-  const cache = new Map<string, Promise<T>>();
-  return function fetchData(name: string, queryFn: () => Promise<T>) {
-    if (!cache.has(name)) {
-      cache.set(name, queryFn());
-    }
-    return cache.get(name)!;
-  };
-}
-
-export async function getAlbumsData(url: string) {
-  if (url !== "/the-beatles/albums") {
-    throw Error("Not implemented");
-  }
-  return await getAlbums();
-}
-
-export async function getBioData() {
-  await new Promise((resolve) => {
-    setTimeout(resolve, 1500);
-  });
-
-  return {
-    content: `The Beatles were an English rock band, 
-    formed in Liverpool in 1960, that comprised 
-    John Lennon, Paul McCartney, George Harrison 
-    and Ringo Starr.`,
-  };
-}
-
 async function getAlbums() {
   await new Promise((resolve) => {
     setTimeout(resolve, 3000);
@@ -100,4 +70,11 @@ async function getAlbums() {
       year: 1963,
     },
   ];
+}
+
+export async function getAlbumsData(url: string) {
+  if (url !== "/the-beatles/albums") {
+    throw Error("Not implemented");
+  }
+  return await getAlbums();
 }

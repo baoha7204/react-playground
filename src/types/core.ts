@@ -26,3 +26,7 @@ export type ArtistProps = {
 export type AlbumsProps = {
   artistId: string;
 };
+
+export type SearchResultsProps = {
+  query: string;
+};

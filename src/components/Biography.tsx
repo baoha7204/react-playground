@@ -1,4 +1,5 @@
-import { getBioData, makeFetching } from "../data/data";
+import { makeFetching } from "../data";
+import { getBioData } from "../data/bio";
 import use from "../hooks/use";
 import { Bio } from "../types/core";
 

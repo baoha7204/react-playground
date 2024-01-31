@@ -1,4 +1,5 @@
-import { getAlbumsData, makeFetching } from "../data/data";
+import { makeFetching } from "../data";
+import { getAlbumsData } from "../data/albums";
 import use from "../hooks/use";
 import { Album, AlbumsProps } from "../types/core";
 

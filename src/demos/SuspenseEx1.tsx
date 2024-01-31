@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ArtistPage from "../pages/ArtistPage";
 
-const SuspenseEx = () => {
+const SuspenseEx1 = () => {
   const [show, setShow] = useState(false);
   if (show) {
     return (
@@ -18,4 +18,4 @@ const SuspenseEx = () => {
   );
 };
 
-export default SuspenseEx;
+export default SuspenseEx1;
