@@ -16,7 +16,6 @@ export async function getAlbumsData(url: string) {
 }
 
 export async function getBioData() {
-  // Add a fake delay to make waiting noticeable.
   await new Promise((resolve) => {
     setTimeout(resolve, 1500);
   });
@@ -30,7 +29,6 @@ export async function getBioData() {
 }
 
 async function getAlbums() {
-  // Add a fake delay to make waiting noticeable.
   await new Promise((resolve) => {
     setTimeout(resolve, 3000);
   });

@@ -1,10 +1,10 @@
 import { getAlbumsData, makeFetching } from "../data/data";
 import use from "../hooks/use";
-import { Album } from "../types/core";
+import { Album, AlbumsProps } from "../types/core";
 
 const albumsFetch = makeFetching<Album[]>();
 
-export default function Albums({ artistId }: { artistId: string }) {
+export default function Albums({ artistId }: AlbumsProps) {
   const albums = use<Album[]>(
     albumsFetch(`/${artistId}/albums`, () =>
       getAlbumsData(`/${artistId}/albums`)

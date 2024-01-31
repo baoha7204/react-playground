@@ -22,3 +22,7 @@ export interface MyPromise<T> extends Promise<T> {
 export type ArtistProps = {
   artist: Artist;
 };
+
+export type AlbumsProps = {
+  artistId: string;
+};
