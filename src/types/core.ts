@@ -9,6 +9,10 @@ export type Album = {
   year: number;
 };
 
+export type Bio = {
+  content: string;
+};
+
 export interface MyPromise<T> extends Promise<T> {
   status?: "pending" | "fulfilled" | "rejected";
   value?: T;

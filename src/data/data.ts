@@ -15,6 +15,20 @@ export async function getAlbumsData(url: string) {
   return await getAlbums();
 }
 
+export async function getBioData() {
+  // Add a fake delay to make waiting noticeable.
+  await new Promise((resolve) => {
+    setTimeout(resolve, 1500);
+  });
+
+  return {
+    content: `The Beatles were an English rock band, 
+    formed in Liverpool in 1960, that comprised 
+    John Lennon, Paul McCartney, George Harrison 
+    and Ringo Starr.`,
+  };
+}
+
 async function getAlbums() {
   // Add a fake delay to make waiting noticeable.
   await new Promise((resolve) => {
