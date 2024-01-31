@@ -1,3 +1,5 @@
+import React from "react";
+
 export type Artist = {
   id: string;
   name: string;
@@ -19,8 +21,16 @@ export interface MyPromise<T> extends Promise<T> {
   reason?: string;
 }
 
-export type ArtistProps = {
+export type ArtistPageProps = {
   artist: Artist;
+};
+
+export type SearchPageProps = {
+  query: {
+    q: string;
+    deferredQuery: string;
+  };
+  changeHandler: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 export type AlbumsProps = {

@@ -1,21 +1,18 @@
-import React, { Suspense, useState } from "react";
-import Loading from "../components/Loading";
-import SearchResults from "../components/SearchResults";
+import React, { useDeferredValue, useState } from "react";
+import SearchPage from "../pages/SearchPage";
 
 const SuspenseEx2 = () => {
   const [query, setQuery] = useState("");
+  const deferredQuery = useDeferredValue(query);
   const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
   };
   return (
     <>
-      <label>
-        Search albums:
-        <input value={query} onChange={changeHandler} />
-      </label>
-      <Suspense fallback={<Loading />}>
-        <SearchResults query={query} />
-      </Suspense>
+      <SearchPage
+        query={{ q: query, deferredQuery }}
+        changeHandler={changeHandler}
+      />
     </>
   );
 };

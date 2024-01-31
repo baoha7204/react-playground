@@ -1,12 +1,12 @@
 import { Suspense } from "react";
 import Loading from "../components/Loading";
-import { ArtistProps } from "../types/core";
+import { ArtistPageProps } from "../types/core";
 import Albums from "../components/Albums";
 import Biography from "../components/Biography";
 import Panel from "../components/Panel";
 import AlbumsGlimmer from "../components/AlbumsGlimmer";
 
-const ArtistPage = ({ artist }: ArtistProps) => {
+const ArtistPage = ({ artist }: ArtistPageProps) => {
   return (
     <>
       <h1>{artist.name}</h1>
