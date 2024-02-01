@@ -1,7 +1,7 @@
-import SuspenseEx2 from "./demos/SuspenseEx2";
+import SuspenseEx3 from "./demos/SuspenseEx3";
 
 function App() {
-  return <SuspenseEx2 />;
+  return <SuspenseEx3 />;
 }
 
 export default App;

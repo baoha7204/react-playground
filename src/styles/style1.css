@@ -46,6 +46,22 @@ ul {
   padding-inline-start: 20px;
 }
 
+main {
+  min-height: 200px;
+  padding: 10px;
+}
+
+.layout {
+  border: 1px solid black;
+}
+
+.header {
+  background: #222;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
 .bio {
   font-style: italic;
 }

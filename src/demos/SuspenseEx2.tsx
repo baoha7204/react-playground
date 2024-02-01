@@ -1,5 +1,6 @@
 import React, { useDeferredValue, useState } from "react";
 import SearchPage from "../pages/SearchPage";
+import "../styles/style1.css";
 
 const SuspenseEx2 = () => {
   const [query, setQuery] = useState("");

@@ -1,5 +1,10 @@
 import React from "react";
 
+export interface MyPromise<T> extends Promise<T> {
+  status?: "pending" | "fulfilled" | "rejected";
+  value?: T;
+  reason?: string;
+}
 export type Artist = {
   id: string;
   name: string;
@@ -14,12 +19,6 @@ export type Album = {
 export type Bio = {
   content: string;
 };
-
-export interface MyPromise<T> extends Promise<T> {
-  status?: "pending" | "fulfilled" | "rejected";
-  value?: T;
-  reason?: string;
-}
 
 export type ArtistPageProps = {
   artist: Artist;
@@ -39,4 +38,9 @@ export type AlbumsProps = {
 
 export type SearchResultsProps = {
   query: string;
+};
+
+export type LayoutProps = {
+  children: JSX.Element;
+  isPending: boolean;
 };
